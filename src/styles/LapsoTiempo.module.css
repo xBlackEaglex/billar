@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 25px;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    width: 65%;;
+}
+.container h1{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+.tiempo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 30px;
+    gap: 10px;
+    font-size: 25px;
+}
+.datos {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+.datos button {
+    margin-right: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 120px;
+}

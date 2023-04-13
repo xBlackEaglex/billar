@@ -1,0 +1,29 @@
+:root {
+
+  --withe: #fff;
+  --black: #000;
+  --gray: rgb(28, 28, 29);
+  --green: #49AF73;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  width: 80%;
+  color: var(--green);
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}

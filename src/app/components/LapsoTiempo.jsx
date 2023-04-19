@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "../../styles/LapsoTiempo.module.css"
 import Image from "next/image";
 
-const LapsoTiempo = () => {
+const LapsoTiempo = ({meza}) => {
         const [fechaActual, setFechaActual] = useState(new Date());
         const [diferenciaMinutos, setDiferenciaMinutos] = useState(null);
 
@@ -22,9 +22,11 @@ const LapsoTiempo = () => {
 
         return (
             <div className={styles.container}>
-                <Image src={'/billar.png'} alt="billar" width={250} height={250} priority quality={100} />
+                <div className={styles.image}>
+                    <Image src={'/billar.png'} alt="billar" fill sizes="250px, 250px" priority quality={100} />
+                </div>
                 <div className={styles.tiempo}>
-                    <h1>Meza 1</h1>
+                    <h1>{`Meza ${meza}`}</h1>
                     <div className={styles.datos}>
                         <button onClick={obtenerFechaActual}> Iniciar </button>
                         <p>Inicio: {`

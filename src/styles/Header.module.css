@@ -2,18 +2,22 @@
     display: flex;
     justify-content: space-around;
     width: 80%;
-    border: 1px solid greenyellow;
-    border-radius: 10px;
+    border: 0.1rem solid greenyellow;
+    border-radius: 1rem;
     align-items: center;
+    position: relative;
 }
 .container p {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: bold;
 }
 .mas{
+    width: 5rem;
+    height: 5rem;
     background: transparent;
     border: none;
     box-shadow: none;
     cursor: pointer;
-    margin: 15px;
+    margin: 1.5rem;
+    position: relative;
 }

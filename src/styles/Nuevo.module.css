@@ -14,10 +14,12 @@
 }
 
 .container button {
-    position: relative;
-    width: 13rem;
-    height: 13rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
 }

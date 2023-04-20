@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "../../styles/LapsoTiempo.module.css"
+import styles from "../../styles/Meza.module.css"
 import Image from "next/image";
 
-const LapsoTiempo = ({meza}) => {
+const LapsoTiempo = ({meza, img, nombre}) => {
         const [fechaActual, setFechaActual] = useState(new Date());
         const [diferenciaMinutos, setDiferenciaMinutos] = useState(null);
 
@@ -22,11 +22,9 @@ const LapsoTiempo = ({meza}) => {
 
         return (
             <div className={styles.container}>
-                <div className={styles.image}>
-                    <Image src={'/billar.png'} alt="billar" fill sizes="250px, 250px" priority quality={100} />
-                </div>
+                    <Image className={styles.image} src={img} alt={nombre} width={250} height={250} priority quality={100} />
                 <div className={styles.tiempo}>
-                    <h1>{`Meza ${meza}`}</h1>
+                    <h1>{`${nombre} ${meza}`}</h1>
                     <div className={styles.datos}>
                         <button onClick={obtenerFechaActual}> Iniciar </button>
                         <p>Inicio: {`

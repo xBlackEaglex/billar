@@ -14,9 +14,8 @@
     justify-content: center;
 }
 .image {
-    position: relative;
-    width: 25rem;
-    height: 25rem;
+    max-width: 100%;
+    height: auto;
 }
 .tiempo {
     display: flex;

@@ -3,19 +3,19 @@
 import Image from "next/image";
 import styles from "../../styles/Header.module.css"
 import Nuevo from "./Nuevo";
-import { useState } from "react";
+import { useMostrar, useSetMostrar } from "../providers/numMezaContext";
 
 const Header = () => {
-
-    const [MostrarBoton, setMostrarBoton] = useState(false)
+    const mostrar = useMostrar()
+    const setMostrar = useSetMostrar()
 
     return (
         <div className={styles.container}>
             <p>Billar</p>
-            <button onClick={() => setMostrarBoton(!MostrarBoton)} className={styles.mas}>
-                <Image src={'/mas.png'} alt="mas" fill sizes="50px, 50px" quality={100} />
+            <button onClick={setMostrar} className={styles.mas}>
+                <Image className={styles.image} src={'/mas.png'} alt="mas" width={50} height={50} quality={100} />
             </button>
-            {MostrarBoton ? <Nuevo /> : null}
+            {mostrar ? <Nuevo /> : null}
         </div>
 
     );

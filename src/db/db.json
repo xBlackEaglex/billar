@@ -1,0 +1,106 @@
+{
+    "precios": [
+        { 
+            "id": 1, 
+            "producto": "papas", 
+            "precio": 15,
+            "img": "/papas.png" 
+        },
+        { 
+            "id": 2, 
+            "producto": "churros", 
+            "precio": 7,
+            "img": "/churros.png" 
+        },
+        { 
+            "id": 3, 
+            "producto": "marlboro caja", 
+            "precio": 80,
+            "img": "/marlboro.png"
+        },
+        { 
+            "id": 4, 
+            "producto": "pall mall caja", 
+            "precio": 70,
+            "img": "/pallMall.png"
+        },
+        { 
+            "id": 5, 
+            "producto": "marlboro suelto", 
+            "precio": 5,
+            "img": "/marlboroSuelto.png"
+        },
+        { 
+            "id": 6, 
+            "producto": "pall mall suelto", 
+            "precio": 5,
+            "img": "/pallSuelto.png"
+        },
+        { 
+            "id": 7, 
+            "producto": "tehuacan", 
+            "precio": 16,
+            "img": "/tehuacan.png"
+        },
+        { 
+            "id": 8, 
+            "producto": "peñafiel mandarina", 
+            "precio": 16,
+            "img": "/mandarina.png"
+        },
+        { 
+            "id": 9, 
+            "producto": "orange", 
+            "precio": 16,
+            "img": "/orange.png"
+        },
+        { 
+            "id": 10, 
+            "producto": "coca", 
+            "precio": 16,
+            "img": "/coca.png"
+        },
+        { 
+            "id": 11, 
+            "producto": "7up", 
+            "precio": 13,
+            "img": "/7up.png"
+        },
+        { 
+            "id": 12, 
+            "producto": "squirt", 
+            "precio": 17,
+            "img": "/squirt.png"
+        },
+        { 
+            "id": 13, 
+            "producto": "coca 2.5L", 
+            "precio": 35,
+            "img": "/coca2.5.png"
+        },
+        { 
+            "id": 14, 
+            "producto": "vaso", 
+            "precio": 1,
+            "img": "/vaso.png"
+        },
+        { 
+            "id": 15, 
+            "producto": "aspirina", 
+            "precio": 2,
+            "img": "/aspirina.png"
+        }
+    ],
+    "tiempos": [
+        { 
+            "id": 1, 
+            "producto": "minuto billar", 
+            "precio": 0.5 
+        },
+        { 
+            "id": 2, 
+            "producto": "minuto Domino", 
+            "precio": 0.26 
+        }
+    ]
+}

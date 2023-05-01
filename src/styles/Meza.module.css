@@ -1,12 +1,19 @@
 .container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 2.5rem;
     padding: 2.5rem;
     border: 0.1rem solid greenyellow;
     border-radius: 1rem;
-    width: 65%;;
+    width: 65%;
+}
+.containerTiempo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 1.8rem;
 }
 .container h1{
     margin-bottom: 2.5rem;
@@ -14,7 +21,16 @@
     justify-content: center;
 }
 .image {
-    max-width: 100%;
+    max-width: 25%;
+    height: auto;
+}
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.imgFlecha {
+    max-width: 5%;
     height: auto;
 }
 .tiempo {

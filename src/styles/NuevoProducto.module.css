@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    border: 0.5rem solid rgb(20, 20, 222);
+    border-radius: 1rem;
+    max-width: 80%;
+    font-size: 1.6rem;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border: solid 0.05rem rgba(255, 255, 255, 0.063);
+}

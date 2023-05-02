@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.productos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+    border: 0.3rem solid rgba(255, 255, 255, 0.729);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.productoAndNombre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.p {
+    border: solid 0.1rem rgba(0, 0, 0, 0.711);
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    animation: colorChange 1s;
+    margin: 0.2rem;
+}
+.total{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0.2rem 1rem;
+    color: rgb(255, 0, 0);
+    background-color: white;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    max-width: 50%;
+    text-align: center;
+}
+.container input {
+    max-width: 12%;
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.3rem 0;
+}
+.containerButton {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+.button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+@keyframes colorChange {
+    0% {
+            background-color: white;
+            color: black;
+        }
+}

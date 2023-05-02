@@ -2,7 +2,7 @@ import styles from '../../styles/NuevoProducto.module.css'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-const NuevoProducto = () => {
+const NuevoProducto = (props) => {
     const [data, setData] = useState([])
     const [cargando, setCargando] = useState(true)
 
@@ -17,13 +17,17 @@ const NuevoProducto = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const handleNameButton = (name) => {
+        props.handleConsumo(name)
+    }
+
     return (
         <div className={styles.container}>
             {cargando 
                 ? null 
                 : data.map(img => (
-                    <button key={img.id} className={styles.button}>
-                        <Image src={img.img} alt={img.producto} width={150} height={150} priority quality={100} />
+                    <button onClick={() => handleNameButton(img)} key={img.id} className={styles.button}>
+                        <Image src={img.img} alt={img.producto} width={100} height={100} priority quality={100} />
                     </button>
                 ))
             }

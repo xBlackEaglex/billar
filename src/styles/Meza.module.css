@@ -53,3 +53,9 @@
     cursor: pointer;
     width: 12rem;
 }
+.total{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 6rem;
+}

@@ -25,6 +25,20 @@
     padding: 1rem;
     margin-top: 1rem;
 }
+.pAndButton {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+}
+.pAndButton button {
+    color: white;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
 .p {
     border: solid 0.1rem rgba(0, 0, 0, 0.711);
     padding: 0.5rem 1rem;
@@ -43,7 +57,7 @@
     max-width: 50%;
     text-align: center;
 }
-.container input {
+.input {
     max-width: 12%;
     color: white;
     background-color: transparent;

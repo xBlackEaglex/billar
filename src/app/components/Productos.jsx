@@ -22,7 +22,7 @@ const Productos = (props) => {
         <div className={styles.container}>
             <div className={styles.button}>
                 <button onClick={() => handleMostrar()}><Image className={styles.image} src={'/newUser.png'} alt="mas" width={25} height={25} quality={100} /></button>
-                <button onClick={() => handleEliminar()}><Image className={styles.image} src={'/eliminarUsuario.png'} alt="menos" width={25} height={25} quality={100} /></button>
+                <button onClick={() => {handleEliminar(); props.handleBorrar()}}><Image className={styles.image} src={'/eliminarUsuario.png'} alt="menos" width={25} height={25} quality={100} /></button>
             </div>
             {mostrarNuevo}
         </div>

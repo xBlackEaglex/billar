@@ -1,14 +1,42 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 0.5rem solid rgb(20, 20, 222);
     border-radius: 1rem;
     font-size: 1.6rem;
     background-color: rgba(0, 0, 0, 0.719);
+}
+.containerProducts {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
 }
 .button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     border: solid 0.05rem rgba(255, 255, 255, 0.063);
+}
+.agregar{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0.5rem;
+}
+.input {
+    max-width: 17%;
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.3rem 0;
+}
+.agregar button {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
 }

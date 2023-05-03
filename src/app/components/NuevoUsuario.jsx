@@ -16,23 +16,41 @@ const NuevoUsuario = (props) => {
     }
 
     const handleConsumidos = (producto) => {
-        setConsumidos([...consumidos, producto.producto])
+        const nuevoConsumido = {
+            nombre: producto.producto,
+            precio: producto.precio
+        }
+        setConsumidos([...consumidos, nuevoConsumido])
         setTotalPersona(totalPersona + producto.precio)
+        handleTotal(totalPersona + producto.precio, elemento)
     }
 
-
+    const handleEliminarConsumido = (index) => {
+        const precioConsumido = consumidos[index].precio
+        const nuevosConsumidos = consumidos.filter((_, i) => i !== index)
+        setConsumidos(nuevosConsumidos)
+        setTotalPersona(totalPersona - precioConsumido)
+        handleTotal(totalPersona - precioConsumido, elemento)
+    }
     useEffect(() => {
         handleTotal(totalPersona, elemento)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[totalPersona])
+    },[totalPersona, elemento])
 
 
     return (
         <div className={styles.container}>
             <div className={styles.productos}>
                 <div className={styles.productoAndNombre}>
-                    <input type="text" />
-                    {consumidos.map((name,index) => <p className={styles.p} key={index}>{name}</p>)}
+                    <input className={styles.input} type="text" />
+                    {consumidos.map((name, index) => {
+                        return (
+                            <div className={styles.pAndButton} key={index}>
+                                <p className={styles.p}>{name.nombre}</p>
+                                <button onClick={() => handleEliminarConsumido(index)}>X</button>
+                            </div>
+                        )
+                    })}
                 </div>
                 <div className={styles.containerButton}>
                     <p className={styles.total}>total: ${totalPersona} </p>
@@ -40,7 +58,7 @@ const NuevoUsuario = (props) => {
                 </div>
             </div>
             <div className={styles.nuevo}>
-                {mostrar ? <NuevoProducto handleConsumo={handleConsumidos}/> : null}
+                {mostrar ? <NuevoProducto handleMostrar={handleMostrar} handleConsumo={handleConsumidos}/> : null}
             </div>
         </div>
     );

@@ -89,6 +89,12 @@
             "producto": "aspirina", 
             "precio": 2,
             "img": "/aspirina.png"
+        },
+        { 
+            "id": 16, 
+            "producto": "$0", 
+            "precio": 0,
+            "img": "/moneda.png"
         }
     ],
     "tiempos": [

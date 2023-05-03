@@ -4,12 +4,14 @@ import Image from 'next/image';
 import NuevoUsuario from './NuevoUsuario';
 
 
-const Productos = () => {
+const Productos = (props) => {
+
+    const prop = {...props}
 
     const [mostrarNuevo, setMostrarNuevo] = useState([])
 
     const handleMostrar = () => {
-        setMostrarNuevo([...mostrarNuevo, <NuevoUsuario numElemento={mostrarNuevo.length} key={mostrarNuevo.length} />]);
+        setMostrarNuevo([...mostrarNuevo, <NuevoUsuario handle={prop.handle} numElemento={mostrarNuevo.length} key={mostrarNuevo.length} />]);
     }
 
     const handleEliminar = () => {

@@ -4,11 +4,12 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/Meza.module.css"
 import Image from "next/image";
 import Productos from "./Productos";
-import { useTotal, useSetTotal, useTotalIndividual } from "../providers/productosContext";
 
 const LapsoTiempo = ({meza, img, nombre}) => {
         const [fechaActual, setFechaActual] = useState(new Date());
         const [diferenciaMinutos, setDiferenciaMinutos] = useState(null);
+        const [total, setTotal] = useState(0);
+        const [individual, setIndividual] = useState([])
 
         // Función para obtener la fecha actual
         const obtenerFechaActual = () => {
@@ -22,14 +23,22 @@ const LapsoTiempo = ({meza, img, nombre}) => {
             setDiferenciaMinutos(diferencia);
         };
 
-        const setTotal = useSetTotal()
-        let total = useTotal()
-        const individual = useTotalIndividual()
+        const handleIndividual = (totalPersona, elemento) => {
+            setIndividual(individual[elemento] = totalPersona)
+            console.log(individual);
+            console.log(elemento);
+            console.log(totalPersona);
+        }
 
-        useEffect(() => {
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-            setTotal(total = individual.reduce((a,b) => a + b, 0))
-        },[total])
+        // const sum = () => {
+        //     individual.reduce((a,b) => a + b, 0)
+        // }
+
+        // useEffect(() => {
+        //     setTotal(sum)
+        // // eslint-disable-next-line react-hooks/exhaustive-deps
+        // },[individual])
+
 
         return (
                 <div className={styles.container}>
@@ -52,7 +61,7 @@ const LapsoTiempo = ({meza, img, nombre}) => {
                             </div>
                         </div>
                     </div>
-                    <Productos />
+                    <Productos handle={handleIndividual} />
                 </div>
         );
 };

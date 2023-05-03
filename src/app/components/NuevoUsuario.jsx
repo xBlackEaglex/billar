@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import styles from '../../styles/NuevoUsuario.module.css'
 import NuevoProducto from './NuevoProducto';
 import Image from 'next/image';
-import { useTotalIndividual, useSetTotalIndividual } from '../providers/productosContext';
 
 const NuevoUsuario = (props) => {
     const elemento = props.numElemento
+    const handleTotal = props.handle
 
     const [mostrar, setMostrar] = useState(false)
     const [consumidos, setConsumidos] = useState([])
@@ -20,16 +20,12 @@ const NuevoUsuario = (props) => {
         setTotalPersona(totalPersona + producto.precio)
     }
 
-    const setIndividual = useSetTotalIndividual()
-    let individual = useTotalIndividual()
 
     useEffect(() => {
-        setIndividual(individual[elemento]=totalPersona)
+        handleTotal(totalPersona, elemento)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[totalPersona])
 
-
-    console.log(individual);
 
     return (
         <div className={styles.container}>

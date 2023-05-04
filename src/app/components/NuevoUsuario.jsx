@@ -10,6 +10,7 @@ const NuevoUsuario = (props) => {
     const [mostrar, setMostrar] = useState(false)
     const [consumidos, setConsumidos] = useState([])
     const [totalPersona, setTotalPersona] = useState(0)
+    const [mostrarElemento, setMostrarElemento] = useState(true)
 
     const handleMostrar = () => {
         setMostrar(!mostrar)
@@ -38,8 +39,17 @@ const NuevoUsuario = (props) => {
     },[totalPersona, elemento])
 
 
+    const handleMostrarElemento = () => {
+        const confirmDelete = window.confirm("¿Está seguro de que desea eliminar la cuenta de este cliente?");
+        if (confirmDelete) {
+            setMostrarElemento(!mostrarElemento)
+            setTotalPersona(0)
+        }
+    }
+
+
     return (
-        <div className={styles.container}>
+        <div style={!mostrarElemento ? {display: 'none'} : {}} className={styles.container}>
             <div className={styles.productos}>
                 <div className={styles.productoAndNombre}>
                     <input className={styles.input} type="text" />
@@ -55,6 +65,7 @@ const NuevoUsuario = (props) => {
                 <div className={styles.containerButton}>
                     <p className={styles.total}>total: ${totalPersona} </p>
                     <button className={styles.button} onClick={() => handleMostrar()}><Image className={styles.image} src={'/mas.png'} alt="mas" width={30} height={30} quality={100} /></button>
+                    <button className={styles.buttonEliminar} onClick={() => {handleMostrarElemento()}}><Image className={styles.image} src={'/eliminarUsuario.png'} alt="menos" width={25} height={25} quality={100} /></button>
                 </div>
             </div>
             <div className={styles.nuevo}>

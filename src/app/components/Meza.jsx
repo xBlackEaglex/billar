@@ -13,6 +13,7 @@ const LapsoTiempo = ({meza, img, nombre, id}) => {
     const [data, setData] = useState([])
     const [cargando, setCargando] = useState(true)
     const [numeroPersonas, setNumeroPersonas] = useState(1);
+    const [mostrarElemento, setMostrarElemento] = useState(true)
     let costeTiempo = 0
 
     useEffect(() => {
@@ -67,8 +68,15 @@ const LapsoTiempo = ({meza, img, nombre, id}) => {
 
     const calcularCostoPorPersona = () => calcularTiempo() / numeroPersonas;
 
+    const handleMostrarElemento = () => {
+        const confirmDelete = window.confirm("¿Está seguro de que desea eliminar la mesa?");
+        if (confirmDelete) {
+            setMostrarElemento(!mostrarElemento)
+        }
+    }
+
     return (
-            <div className={styles.container}>
+            <div style={!mostrarElemento ? {display: 'none'} : {}} className={styles.container}>
                 <div className={styles.containerTiempo}>
                     <Image className={styles.image} src={img} alt={nombre} width={512} height={512} priority quality={100} />
                     <div className={styles.tiempo}>
@@ -92,6 +100,9 @@ const LapsoTiempo = ({meza, img, nombre, id}) => {
                             {numeroPersonas > 1 ? <p>Costo por persona: ${calcularCostoPorPersona().toFixed(1)}</p> : null}
                             <p>Total: ${total.toFixed(1)} </p>
                         </div>
+                    </div>
+                    <div className={styles.divBorrar}>
+                        <button className={styles.buttonEliminar} onClick={() => {handleMostrarElemento()}}><Image className={styles.image} src={'/eliminar.png'} alt="eliminar" width={100} height={100} quality={100} /></button>
                     </div>
                 </div>
                 <Productos handle={handleIndividual} handleBorrar={borrarUltimoElemento} />

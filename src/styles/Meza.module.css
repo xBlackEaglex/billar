@@ -5,7 +5,7 @@
     align-items: center;
     margin-top: 2.5rem;
     padding: 2.5rem;
-    border: 0.1rem solid greenyellow;
+    border: 0.2rem solid greenyellow;
     border-radius: 1rem;
     width: 65%;
 }
@@ -14,6 +14,17 @@
     align-items: flex-start;
     justify-content: center;
     margin-top: 1.8rem;
+}
+.divBorrar{
+    position: absolute;
+    height: auto;
+    right: 60rem;
+}
+.buttonEliminar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
 }
 .container h1{
     margin-bottom: 2.5rem;
@@ -37,7 +48,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 3rem;
+    margin-left: 4rem;
     gap: 1rem;
     font-size: 8rem;
 }
@@ -59,6 +70,7 @@
     align-items: center;
     color: white;
     font-size: 6rem;
+    margin-left: 3rem;
 }
 .total p{
     margin-top: 1rem;
@@ -74,4 +86,14 @@
     margin: 0 1rem;
     background-color: rgba(249, 248, 248, 0.104);
     color: white;
+}
+@media (max-width: 1940px) {
+    .divBorrar{
+        right: 40rem;
+    }
+}
+@media (max-width: 1280px) {
+    .divBorrar{
+        right: 26rem;
+    }
 }

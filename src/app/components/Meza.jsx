@@ -18,7 +18,7 @@ const LapsoTiempo = ({meza, img, nombre, id}) => {
 
     useEffect(() => {
         async function getData(){
-            const response = await fetch('http://localhost:3010/tiempos')
+            const response = await fetch('https://long-outerwear-duck.cyclic.app/tiempos')
             const dataApi =  await response.json()
             setData(dataApi)
             setCargando(false)

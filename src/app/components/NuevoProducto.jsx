@@ -11,7 +11,7 @@ const NuevoProducto = (props) => {
 
     useEffect(() => {
         async function getData() {
-            const response = await fetch("http://localhost:3010/precios");
+            const response = await fetch("https://long-outerwear-duck.cyclic.app/precios");
             const dataApi = await response.json();
             setData(dataApi);
             setCargando(!cargando);

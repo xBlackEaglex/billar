@@ -1,10 +1,10 @@
 import styles from '../../styles/Nuevo.module.css'
 import Image from 'next/image'
-import { useSetMezaBillar, useSetMezaDomino, useSetMostrar } from "../providers/numMezaContext";
+import { useSetMesaBillar, useSetMesaDomino, useSetMostrar } from "../providers/numMesaContext";
 
 const Nuevo = () => {
-    const setBillar = useSetMezaBillar()
-    const setDomino = useSetMezaDomino()
+    const setBillar = useSetMesaBillar()
+    const setDomino = useSetMesaDomino()
     const mostrar = useSetMostrar()
 
     return ( 

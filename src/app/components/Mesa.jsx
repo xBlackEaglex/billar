@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "../../styles/Meza.module.css"
+import styles from "../../styles/Mesa.module.css"
 import Image from "next/image";
 import Productos from "./Productos";
 
-const LapsoTiempo = ({meza, img, nombre, id, dataPrecios, dataTime}) => {
+const LapsoTiempo = ({mesa, img, nombre, id, dataPrecios, dataTime}) => {
     const dataPrecios1 = dataPrecios;
     const data = dataTime;
 
@@ -69,7 +69,7 @@ const LapsoTiempo = ({meza, img, nombre, id, dataPrecios, dataTime}) => {
                 <div className={styles.containerTiempo}>
                     <Image className={styles.image} src={img} alt={nombre} width={512} height={512} priority quality={100} />
                     <div className={styles.tiempo}>
-                        <h1>{`${nombre} ${meza}`}</h1>
+                        <h1>{`${nombre} ${mesa}`}</h1>
                         <div className={styles.datos}>
                             <button onClick={obtenerFechaActual}> Iniciar </button>
                             <p>Inicio: {`

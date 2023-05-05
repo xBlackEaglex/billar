@@ -1,13 +1,13 @@
 "use client";
 
-import Meza from "./Meza";
-import { useMezaBillar, useMezaDomino } from "../providers/numMezaContext";
+import Mesa from "./Mesa";
+import { useMesaBillar, useMesaDomino } from "../providers/numMesaContext";
 import styles from "../../styles/Container.module.css"
 import { useState, useEffect } from "react";
 
 const Container = () => {
-    let numMezaB = useMezaBillar();
-    let numMezaD = useMezaDomino();
+    let numMesaB = useMesaBillar();
+    let numMesaD = useMesaDomino();
 
     const [dataTime, setDataTime] = useState([])
     const [dataPrecios, setDataPrecios] = useState([]);
@@ -36,16 +36,16 @@ const Container = () => {
 
 
 
-    const MBillar = Array.from(Array(numMezaB).keys());
-    const MDomino = Array.from(Array(numMezaD).keys());
+    const MBillar = Array.from(Array(numMesaB).keys());
+    const MDomino = Array.from(Array(numMesaD).keys());
 
     return (
         <div className={styles.container}>
             {MBillar.map((billar, index) => (
-                <Meza dataPrecios={dataPrecios} dataTime={dataTime} key={index} meza={billar + 1} img={'/billar.png'} nombre={'Pool'} id={1} />
+                <Mesa dataPrecios={dataPrecios} dataTime={dataTime} key={index} mesa={billar + 1} img={'/billar.png'} nombre={'Pool'} id={1} />
             ))}
             {MDomino.map((domino, index) => (
-                <Meza dataPrecios={dataPrecios} dataTime={dataTime} key={index} meza={domino + 1} img={'/domino.png'} nombre={'Domino'} id={2} />
+                <Mesa dataPrecios={dataPrecios} dataTime={dataTime} key={index} mesa={domino + 1} img={'/domino.png'} nombre={'Domino'} id={2} />
             ))}
         </div>
     );

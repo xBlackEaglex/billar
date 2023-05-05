@@ -1,15 +1,15 @@
 import Container from "./components/Container"
 import Header from "./components/Header"
 import styles from "../styles/main.module.css"
-import { UseNumMezaProvider } from "./providers/numMezaContext"
+import { UseNumMesaProvider } from "./providers/numMesaContext"
 
 export default function App() {
   return (
     <div className={styles.main}>
-      <UseNumMezaProvider>
+      <UseNumMesaProvider>
         <Header />
         <Container />
-      </UseNumMezaProvider>
+      </UseNumMesaProvider>
     </div>
   )
 }

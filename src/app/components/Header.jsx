@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "../../styles/Header.module.css"
 import Nuevo from "./Nuevo";
-import { useMostrar, useSetMostrar } from "../providers/numMezaContext";
+import { useMostrar, useSetMostrar } from "../providers/numMesaContext";
 
 const Header = () => {
     const mostrar = useMostrar()

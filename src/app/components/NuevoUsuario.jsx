@@ -6,6 +6,7 @@ import Image from 'next/image';
 const NuevoUsuario = (props) => {
     const elemento = props.numElemento
     const handleTotal = props.handle
+    const dataPrecios1 = props.dataPrecios
 
     const [mostrar, setMostrar] = useState(false)
     const [consumidos, setConsumidos] = useState([])
@@ -69,7 +70,7 @@ const NuevoUsuario = (props) => {
                 </div>
             </div>
             <div className={styles.nuevo}>
-                {mostrar ? <NuevoProducto handleMostrar={handleMostrar} handleConsumo={handleConsumidos}/> : null}
+                {mostrar ? <NuevoProducto dataPrecios={dataPrecios1} handleMostrar={handleMostrar} handleConsumo={handleConsumidos}/> : null}
             </div>
         </div>
     );

@@ -5,32 +5,21 @@ import styles from "../../styles/Meza.module.css"
 import Image from "next/image";
 import Productos from "./Productos";
 
-const LapsoTiempo = ({meza, img, nombre, id}) => {
+const LapsoTiempo = ({meza, img, nombre, id, dataPrecios, dataTime}) => {
+    const dataPrecios1 = dataPrecios;
+    const data = dataTime;
+
     const [fechaActual, setFechaActual] = useState(new Date());
     const [diferenciaMinutos, setDiferenciaMinutos] = useState(null);
     const [total, setTotal] = useState(0);
     const [individual, setIndividual] = useState([])
-    const [data, setData] = useState([])
-    const [cargando, setCargando] = useState(true)
     const [numeroPersonas, setNumeroPersonas] = useState(1);
     const [mostrarElemento, setMostrarElemento] = useState(true)
+
     let costeTiempo = 0
 
-    useEffect(() => {
-        async function getData(){
-            const response = await fetch('https://long-outerwear-duck.cyclic.app/tiempos')
-            const dataApi =  await response.json()
-            setData(dataApi)
-            setCargando(false)
-        }
-        getData()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    if (!cargando) {
         const tiempo = data.find(producto => producto.id === id)
         costeTiempo = tiempo.precio
-    }
 
     const calcularTiempo = () => diferenciaMinutos!==null ? costeTiempo * diferenciaMinutos : 0
 
@@ -105,7 +94,7 @@ const LapsoTiempo = ({meza, img, nombre, id}) => {
                         <button className={styles.buttonEliminar} onClick={() => {handleMostrarElemento()}}><Image className={styles.image} src={'/eliminar.png'} alt="eliminar" width={100} height={100} quality={100} /></button>
                     </div>
                 </div>
-                <Productos handle={handleIndividual} handleBorrar={borrarUltimoElemento} />
+                <Productos dataPrecios={dataPrecios1} handle={handleIndividual} handleBorrar={borrarUltimoElemento} />
             </div>
     );
 };

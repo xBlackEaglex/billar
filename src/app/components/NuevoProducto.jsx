@@ -3,21 +3,16 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const NuevoProducto = (props) => {
-    const [data, setData] = useState([]);
-    const [cargando, setCargando] = useState(true);
+    const dataPrecios1 = props.dataPrecios
+
+    const [data, setData] = useState(dataPrecios1);
     const [nuevoPrecio, setNuevoPrecio] = useState(0);
     const [regresar, setRegresar] = useState(false)
     const [mostrar, setMostrar] = useState(true)
 
     useEffect(() => {
-        async function getData() {
-            const response = await fetch("https://long-outerwear-duck.cyclic.app/precios");
-            const dataApi = await response.json();
-            setData(dataApi);
-            setCargando(!cargando);
-        }
-        getData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+            setData(dataPrecios1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [regresar]);
 
     const handleNameButton = (name) => {
@@ -39,8 +34,6 @@ const NuevoProducto = (props) => {
     return (
         <div className={styles.container}>
             <div className={styles.containerProducts} >
-                {cargando ? null : (
-                    <>
                         {data.map((img) => (
                             <button
                                 onClick={() => {
@@ -55,8 +48,6 @@ const NuevoProducto = (props) => {
                                 <Image src={img.img} alt={img.producto} width={85} height={85} priority quality={100} />
                             </button>
                         ))}
-                    </>
-                )}
             </div>
             <div className={styles.agregar}> 
                 {mostrar 

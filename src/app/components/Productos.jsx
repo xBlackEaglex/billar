@@ -11,7 +11,7 @@ const Productos = (props) => {
     const [mostrarNuevo, setMostrarNuevo] = useState([])
 
     const handleMostrar = () => {
-        setMostrarNuevo([...mostrarNuevo, <NuevoUsuario handle={prop.handle} numElemento={mostrarNuevo.length} key={mostrarNuevo.length} />]);
+        setMostrarNuevo([...mostrarNuevo, <NuevoUsuario dataPrecios={prop.dataPrecios} handle={prop.handle} numElemento={mostrarNuevo.length} key={mostrarNuevo.length} />]);
     }
 
     return (

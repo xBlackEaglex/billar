@@ -25,7 +25,10 @@ const LapsoTiempo = ({mesa, img, nombre, id, dataPrecios, dataTime}) => {
 
     // Función para obtener la fecha actual
     const obtenerFechaActual = () => {
-        setFechaActual(new Date());
+        const confirmDelete = window.confirm("¿Está seguro de que desea iniciar un nuevo tiempo?");
+        if (confirmDelete) {
+            setFechaActual(new Date());
+        }
     };
 
     // Función para calcular la diferencia en minutos

@@ -21,7 +21,7 @@ html{
 }
 
 body {
-  width: 80%;
+  width: 100%;
   color: var(--green);
   background: var(--gray);
   display: flex;
@@ -29,3 +29,23 @@ body {
   justify-content: center;
   margin-top: 1.5rem;
 }
+
+/* media queries */
+
+@media (min-width: 450px) {
+  html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body {
+    width: 80%;
+    color: var(--green);
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  }

@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36rem;
-    height: 25rem;
+    width: 25rem;
+    height: 10rem;
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
     right: 0rem;
@@ -21,6 +21,31 @@
 }
 
 .image {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
+}
+
+/* media queries */
+
+@media (min-width: 450px) {
+    .container {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36rem;
+        height: 25rem;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        right: 0rem;
+        top: 8rem;
+        gap: 5rem;
+        border-radius: 1.5rem;
+        border: 0.1rem solid  greenyellow;
+    }
+    
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
 }

@@ -3,22 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2.5rem;
-    padding: 2.5rem;
+    margin-top: 2rem;
+    padding: 2rem;
     border: 0.2rem solid greenyellow;
     border-radius: 1rem;
-    width: 65%;
+    width: 90%;
 }
 .containerTiempo {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
 }
 .divBorrar{
-    position: absolute;
-    height: auto;
-    right: 65rem;
+    max-width: 100%;
 }
 .buttonEliminar {
     background: transparent;
@@ -27,30 +25,20 @@
     cursor: pointer;
 }
 .container h1{
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+    font-size: 5rem;
 }
 .image {
-    max-width: 25%;
-    height: auto;
-}
-.button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.imgFlecha {
-    max-width: 5%;
-    height: auto;
+    display: none;
 }
 .tiempo {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 4rem;
     gap: 1rem;
-    font-size: 8rem;
+    font-size: 5rem;
 }
 .datos {
     display: flex;
@@ -58,19 +46,18 @@
     gap: 2rem;
 }
 .datos button {
-    margin-right: 4rem;
+    margin: 0 4rem 0 3.5rem;
     border-radius: 1rem;
-    font-size: 2.5rem;
+    font-size: 1rem;
     cursor: pointer;
-    width: 12rem;
+    width: 6rem;
 }
 .total{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    font-size: 6rem;
-    margin-left: 3rem;
+    font-size: 4rem;
 }
 .total p{
     margin-top: 1rem;
@@ -79,21 +66,110 @@
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .individual input {
-    max-width: 7%;
+    max-width: 8%;
     margin: 0 1rem;
     background-color: rgba(249, 248, 248, 0.104);
     color: white;
 }
-@media (max-width: 1940px) {
+
+/* media queries */
+
+@media (min-width: 450px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5rem;
+        padding: 2.5rem;
+        border: 0.2rem solid greenyellow;
+        border-radius: 1rem;
+        width: 65%;
+    }
+    .containerTiempo {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 1.8rem;
+    }
     .divBorrar{
-        right: 40rem;
+        position: absolute;
+        height: auto;
+        right: 27rem;
+    }
+    .container h1{
+        margin-bottom: 2.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .image {
+        display: inline;
+        max-width: 25%;
+        height: auto;
+    }
+    .button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .imgFlecha {
+        max-width: 5%;
+        height: auto;
+    }
+    .tiempo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 4rem;
+        gap: 1rem;
+        font-size: 8rem;
+    }
+    .datos {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 2rem;
+    }
+    .datos button {
+        margin-right: 4rem;
+        border-radius: 1rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+        width: 12rem;
+    }
+    .total{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 6rem;
+        margin-left: 3rem;
+    }
+    .total p{
+        margin-top: 1rem;
+    }
+    .individual {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+    }
+    .individual input {
+        max-width: 7%;
+        margin: 0 1rem;
+        background-color: rgba(249, 248, 248, 0.104);
+        color: white;
     }
 }
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
     .divBorrar{
-        right: 26rem;
+        right: 43rem;
+    }
+}
+@media (min-width: 1940px) {
+    .divBorrar{
+        right: 65rem;
     }
 }

@@ -45,7 +45,7 @@ const NuevoProducto = (props) => {
                                 key={img.id}
                                 className={styles.button}
                             >
-                                <Image src={img.img} alt={img.producto} width={85} height={85} priority quality={100} />
+                                <Image className={styles.image} src={img.img} alt={img.producto} width={85} height={85} priority quality={100} />
                             </button>
                         ))}
             </div>

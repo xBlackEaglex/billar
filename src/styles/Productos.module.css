@@ -21,9 +21,37 @@
     border: none;
     box-shadow: none;
     cursor: pointer;
-    margin: 0 3rem 0 1rem;
+    margin: 0 1rem 0 1rem;
 }
 .image {
-    max-width: 100%;
+    max-width: 65%;
     height: auto;
+}
+
+/* media queries */
+
+@media (min-width: 450px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        padding: 1rem;
+        border: 0.1rem solid rgb(248, 37, 37);
+        border-radius: 1rem;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    .button button {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        margin: 0 3rem 0 1rem;
+    }
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
 }

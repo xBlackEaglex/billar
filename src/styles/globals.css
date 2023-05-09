@@ -28,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
+  overscroll-behavior: contain;  /*evita que se haga refresh a la pagina cuando se hace scroll hacia arriba*/
 }
 
 /* media queries */

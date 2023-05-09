@@ -27,7 +27,7 @@
 
 /* media queries */
 
-@media (min-width: 450px) {
+@media (min-width: 1280px) {
     .container {
         z-index: 1;
         display: flex;

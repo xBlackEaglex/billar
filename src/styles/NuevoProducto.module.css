@@ -47,7 +47,7 @@
 
 /* media queries */
 
-@media (min-width: 450px) {
+@media (min-width: 1280px) {
     .containerProducts {
         display: grid;
         grid-template-columns: repeat(8, 1fr);

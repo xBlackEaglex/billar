@@ -28,11 +28,14 @@ const NuevoUsuario = (props) => {
     }
 
     const handleEliminarConsumido = (index) => {
-        const precioConsumido = consumidos[index].precio
-        const nuevosConsumidos = consumidos.filter((_, i) => i !== index)
-        setConsumidos(nuevosConsumidos)
-        setTotalPersona(totalPersona - precioConsumido)
-        handleTotal(totalPersona - precioConsumido, elemento)
+        const confirmDelete = window.confirm("¿Está seguro de que desea eliminar el producto?");
+        if (confirmDelete) {
+            const precioConsumido = consumidos[index].precio
+            const nuevosConsumidos = consumidos.filter((_, i) => i !== index)
+            setConsumidos(nuevosConsumidos)
+            setTotalPersona(totalPersona - precioConsumido)
+            handleTotal(totalPersona - precioConsumido, elemento)
+        }
     }
     useEffect(() => {
         handleTotal(totalPersona, elemento)

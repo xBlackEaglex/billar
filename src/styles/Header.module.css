@@ -28,7 +28,7 @@
 
 /* media queries */
 
-@media (min-width: 450px) {
+@media (min-width: 1280px) {
     .container{
         display: flex;
         justify-content: space-around;

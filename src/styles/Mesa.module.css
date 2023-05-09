@@ -16,7 +16,9 @@
     margin-top: 1.5rem;
 }
 .divBorrar{
-    max-width: 100%;
+    position: absolute;
+    height: auto;
+    right: 1rem;
 }
 .buttonEliminar {
     background: transparent;
@@ -32,6 +34,11 @@
 }
 .image {
     display: none;
+}
+.imageEliminar {
+    display: inline;
+    max-width: 20%;
+    height: auto;
 }
 .tiempo {
     display: flex;
@@ -77,7 +84,7 @@
 
 /* media queries */
 
-@media (min-width: 450px) {
+@media (min-width: 1280px) {
     .container {
         display: flex;
         flex-direction: column;
@@ -98,7 +105,7 @@
     .divBorrar{
         position: absolute;
         height: auto;
-        right: 27rem;
+        right: 43rem;
     }
     .container h1{
         margin-bottom: 2.5rem;
@@ -106,6 +113,11 @@
         justify-content: center;
     }
     .image {
+        display: inline;
+        max-width: 25%;
+        height: auto;
+    }
+    .imageEliminar {
         display: inline;
         max-width: 25%;
         height: auto;
@@ -161,11 +173,6 @@
         margin: 0 1rem;
         background-color: rgba(249, 248, 248, 0.104);
         color: white;
-    }
-}
-@media (min-width: 1280px) {
-    .divBorrar{
-        right: 43rem;
     }
 }
 @media (min-width: 1940px) {

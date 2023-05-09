@@ -94,7 +94,7 @@ const LapsoTiempo = ({mesa, img, nombre, id, dataPrecios, dataTime}) => {
                         </div>
                     </div>
                     <div className={styles.divBorrar}>
-                        <button className={styles.buttonEliminar} onClick={() => {handleMostrarElemento()}}><Image className={styles.image} src={'/eliminar.png'} alt="eliminar" width={100} height={100} quality={100} /></button>
+                        <button className={styles.buttonEliminar} onClick={() => {handleMostrarElemento()}}><Image className={styles.imageEliminar} src={'/eliminar.png'} alt="eliminar" width={100} height={100} quality={100} /></button>
                     </div>
                 </div>
                 <Productos dataPrecios={dataPrecios1} handle={handleIndividual} handleBorrar={borrarUltimoElemento} />

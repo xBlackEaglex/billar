@@ -1,31 +1,28 @@
-"use client"
+"use client";
 
-import Container from "./components/Container"
-import Header from "./components/Header"
-import styles from "../styles/main.module.css"
-import { UseNumMesaProvider } from "./providers/numMesaContext"
-import { useEffect } from "react"
+import Container from "./components/Container";
+import Header from "./components/Header";
+import styles from "../styles/main.module.css";
+import { UseNumMesaProvider } from "./providers/numMesaContext";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function App() {
+  
+    var bPreguntar = true;
 
-  useEffect(() => {
-    const disableBackButton = () => {
-      window.history.pushState(null, document.title, window.location.href);
-    };
+    window.onbeforeunload = preguntarAntesDeSalir;
 
-    window.addEventListener('popstate', disableBackButton);
+    function preguntarAntesDeSalir() {
+        if (bPreguntar) return "¿Seguro que quieres salir?";
+    }
 
-    return () => {
-      window.removeEventListener('popstate', disableBackButton);
-    };
-  }, []);
-
-  return (
-    <div className={styles.main}>
-      <UseNumMesaProvider>
-        <Header />
-        <Container />
-      </UseNumMesaProvider>
-    </div>
-  )
+    return (
+        <div className={styles.main}>
+            <UseNumMesaProvider>
+                <Header />
+                <Container />
+            </UseNumMesaProvider>
+        </div>
+    );
 }

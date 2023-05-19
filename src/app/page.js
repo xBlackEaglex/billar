@@ -7,12 +7,14 @@ import { UseNumMesaProvider } from "./providers/numMesaContext";
 
 export default function App() {
 
-    var bPreguntar = true;
+    if (typeof window !== "undefined") {
+        var bPreguntar = true;
 
-    window.onbeforeunload = preguntarAntesDeSalir;
+        window.onbeforeunload = preguntarAntesDeSalir;
 
-    function preguntarAntesDeSalir() {
-        if (bPreguntar) return "¿Seguro que quieres salir?";
+        function preguntarAntesDeSalir() {
+            if (bPreguntar) return "¿Seguro que quieres salir?";
+        }
     }
 
     return (
